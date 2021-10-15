@@ -15,15 +15,15 @@ export const slide = trigger("slide", [
   transition(":enter", [
     style({ transform: "translateX(-80px)", backgroundColor: "white" }),
     animate(
-      2000,
-      style({ transform: "translateX(0px)", backgroundColor: "green" })
+      1000,
+      style({ transform: "translateX(0px)", backgroundColor: "#bde78c" })
     ),
   ]),
 
   transition(":leave", [
     animate(
       300,
-      style({ backgroundColor: "red", transform: "translateX(-30px)" })
+      style({ backgroundColor: "#FF80A8", transform: "translateX(-100%)" })
     ),
   ]),
 ]);
