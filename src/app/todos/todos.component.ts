@@ -1,4 +1,13 @@
-import { animate, style, transition, trigger } from "@angular/animations";
+import {
+  animate,
+  animateChild,
+  group,
+  query,
+  stagger,
+  style,
+  transition,
+  trigger,
+} from "@angular/animations";
 import { Component } from "@angular/core";
 import { fade, slide } from "app/animations/animations";
 
@@ -12,6 +21,17 @@ import { fade, slide } from "app/animations/animations";
     trigger("todoAnimation", [
       transition(":enter", [style({ opacity: 0 }), animate(1000)]),
       transition(":leave", [animate(1000, style({ opacity: 0 }))]),
+    ]),
+    trigger("todosAnimation", [
+      transition(":enter", [
+        group([
+          query("h1", [
+            style({ transform: "translateY(-50%)" }),
+            animate(1000),
+          ]),
+          query("@slide", stagger(100, animateChild())),
+        ]),
+      ]),
     ]),
   ],
 })

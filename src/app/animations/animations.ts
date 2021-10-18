@@ -47,11 +47,11 @@ export const fade = trigger("fade", [
 export const slide = trigger("slide", [
   transition(":enter", [
     style({ backgroundColor: "white", opacity: 0 }),
-    animate(1000, style({ backgroundColor: "#bde78c", opacity: 1 })),
+    animate(500, style({ backgroundColor: "#bde78c", opacity: 1 })),
   ]),
 
   transition(
     ":leave",
-    useAnimation(backOutLeftAnimation, { params: { duration: "1000ms" } })
+    useAnimation(backOutLeftAnimation, { params: { duration: "250ms" } })
   ),
 ]);
