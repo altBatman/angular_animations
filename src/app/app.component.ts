@@ -1,11 +1,17 @@
-import { state, trigger } from "@angular/animations";
+import {
+  state,
+  trigger,
+  transition,
+  style,
+  animate,
+} from "@angular/animations";
 import { Component } from "@angular/core";
-import { transition } from "@angular/core/src/animation/dsl";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
+  animations: [],
 })
 export class AppComponent {
   title = "app";
